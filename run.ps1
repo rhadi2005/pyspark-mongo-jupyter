@@ -69,7 +69,7 @@ Write-Host  -ForegroundColor Yellow "NOTE: When running on Windows change 0.0.0.
 
 Write-Host "
 
-Spark Master - http://localhost:8080
+Spark Master - http://localhost:8088
 
 Spark Worker 1
 

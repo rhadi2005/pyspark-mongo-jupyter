@@ -54,6 +54,26 @@ spark = SparkSession.\
         config("spark.jars.packages", "org.mongodb.spark:mongo-spark-connector_2.12:3.0.0").\
         getOrCreate()
 ```
+=================
+
+#mongodb_uri = "mongodb://circleadmin:circlebi@10.50.0.91:27017/savencia.OBS_DATA"
+
+#mongodb_uri = "mongodb://[::1]:27017,[::1]:27018,[::1]:27019/Stocks.Source?replicaSet=rs0"
+mongodb_uri = "mongodb://127.0.0.1:27017/Stocks.Source"
+mongodb_uri = "mongodb://127.0.0.1:27017/Stocks.Source"
+
+
+spark = SparkSession.\
+        builder.\
+        appName("pyspark-notebook3").\
+        master("spark://spark-master:7077").\
+        config("spark.executor.memory", "1g").\
+        config("spark.mongodb.read.connection.uri", mongodb_uri).\
+        config("spark.mongodb.write.connection.uri", mongodb_uri).\
+        config("spark.jars.packages", "org.mongodb.spark:mongo-spark-connector:10.0.4").\
+        getOrCreate()
+
+=================
 Next load the dataframes from MongoDB
 ```
 df = spark.read.format("mongo").load()

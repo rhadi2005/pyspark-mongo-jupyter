@@ -1,8 +1,14 @@
 # -- Software Stack Version
 
-SPARK_VERSION="3.0.0"
-HADOOP_VERSION="2.7"
-JUPYTERLAB_VERSION="2.2.6"
+#SPARK_VERSION="3.0.0"
+#HADOOP_VERSION="2.7"
+#JUPYTERLAB_VERSION="2.2.6"
+
+# install spark-3.1.2-bin-hadoop3.2
+
+SPARK_VERSION="3.1.2"
+HADOOP_VERSION="3.2"
+JUPYTERLAB_VERSION="3.0.0"
 
 # -- Building the Images
 

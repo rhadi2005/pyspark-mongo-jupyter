@@ -53,7 +53,10 @@ MongoDB Spark Demo
 Jypterlab
 '''
 
-docker exec -it jupyterlab  /opt/conda/bin/jupyter server list
+#docker exec -it jupyterlab  /opt/conda/bin/jupyter server list
+docker exec -it jupyterlab jupyter server list
+
+#jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=
 
 echo '''
 Spark Master - http://localhost:8080
